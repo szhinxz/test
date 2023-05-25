@@ -3,10 +3,16 @@ import { FiGrid,FiUser,FiX,FiLayers } from "react-icons/fi";
 import { MdTimeline,MdFace } from "react-icons/md"; 
 import {timelineElement} from "../Components/timelineEle";
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
+import { BsPersonWorkspace } from "react-icons/bs";
+
+import Resume from "../assets/Resume.pdf"
 
 import "react-vertical-timeline-component/style.min.css";
 
 export default function Home(){
+    
+
+
     useEffect(() => {
         const obsever = new IntersectionObserver((entries) =>{
             entries.forEach((entry) =>{
@@ -137,9 +143,14 @@ export default function Home(){
                 <img className="image" src="https://images.unsplash.com/photo-1682687220591-cfd91ab5c1b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" draggable="false"/>
             
             </div> */}
-            <h1>
-                Hi everyone!
-            </h1>
+            <div className="sec-text">
+                <p>
+                <h2>I'm</h2>
+                    <span className="typed-text">
+                    Developer..
+                    </span>
+                </p>
+            </div>
             <h2>Introduce</h2>
             <p>My name is Sathaphon Khennamthieng</p>
         </section>
@@ -170,7 +181,7 @@ export default function Home(){
                                 {element.description}
                             </h3>
                             <h3 className="vertical-timeline-element-buttonText">
-                                <a href="#"className="timeline-butt">{element.buttonText}</a>
+                                <a href={element.dataLink} target="_blank" className="timeline-butt">{element.buttonText}</a>
                             </h3>
                             
 
@@ -222,8 +233,44 @@ export default function Home(){
 
         <section className="hidden" id="exper"> 
             <h2>EXPERIENCE</h2>
-            <p>My name is Sathaphon Khennamthieng</p>
+            <div className="con-per">
+                <div className="box">
+                    <div className="box-l">
+                        <h1><BsPersonWorkspace /></h1>
+                        <h2>Company</h2>
+                        <p>Thaicentral</p>
+                    </div>
+                    <div className="box-r">
+                        <h1><FiUser /></h1>
+                        <h2>Position</h2>
+                        <p>System Developer</p>
+                        <p>Salary</p>
+                        <p>22,000</p>
+                    </div>
+                </div>
+                <div className="bar"></div>
+                <div className="box">
+                    <div className="box-l">
+                        <h1><BsPersonWorkspace /></h1>
+                        <h2>Company</h2>
+                        <p>Miracle Life Coach</p>
+                    </div>
+                    <div className="box-r">
+                        <h1><FiUser /></h1>
+                        <h2>Position</h2>
+                        <p>System Developer</p>
+                        <p>Salary</p>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="hidden"> 
+            <h2>Resume</h2>
+            <p>This file Resume for open in pdf</p>
+            <a href={Resume} download="Resume"><button className="Res-but">Resume</button></a>
         </section>
         </>
+
     )
 }

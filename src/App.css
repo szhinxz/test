@@ -24,6 +24,7 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -45,9 +46,49 @@ header {
     z-index: 1;
 }
 
+.container-footer {
+    max-width: auto;
+    margin: 0;
+    text-align: center;
+}
+
+.nav.footer {
+    width: 100%;
+    z-index: 1;
+}
+
+.footer {
+    width: 100%;
+    background-color: #080808;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .site-title {
+    border-radius: 100%;
+    width: 65px;
+    height: 65px;
     text-decoration: none;
     font-size: 3rem;
+}
+
+.site-title:hover {
+    color: #df8b0b;
+}
+
+.Res-but:hover {
+    background-color: #df8b0b;
+    color: #fff;
 }
 
 .banner {
@@ -219,19 +260,50 @@ nav a:hover {
 }
 
 .logo-banner {
+    flex-wrap: wrap;
     display: flex;
     background-color: white;
-    width: 180px;
+    width: 500px;
     border-radius: 100%;
-    height: 180px;
+    height: 500px;
     text-align: center;
     display: grid;
     place-items: center;
     align-content: center;
-    background-image: url("/public/image/anime01.png");
+    background-image: url("./assets/p01.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.sec-text {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.typed-text {
+    flex-wrap: wrap;
+    font-size: 5em;
+    letter-spacing: 10px;
+    color: #df8b0b;
+    position: relative;
+}
+
+.typed-text::before {
+    flex-wrap: wrap;
+    content: '|';
+    position: absolute;
+    color: #000;
+    right: 0px;
+    background-color: #000;
+    width: 100%;
+    animation: typing 2.5s steps(15) infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 0;
+    }
 }
 
 .logos:nth-child(1) {
@@ -305,6 +377,28 @@ nav a:hover {
     opacity: 1;
 }
 
+.con-per {
+    display: block;
+    gap: 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+.bar {
+    position: relative;
+    width: 50%;
+    height: 2px;
+    top: 20px;
+    left: 460px;
+    background-color: #fff;
+}
+
 @media only screen and (max-width: 768px) {
     .mobile-menu {
         display: block;
@@ -321,11 +415,11 @@ nav a:hover {
         width: 100%;
         height: 100%;
         display: flex;
-        position: fixed;
         flex-direction: column;
         right: -100%;
         top: 80px;
-        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
         transition: 0.5s ease;
         color: #000;
     }
@@ -335,8 +429,7 @@ nav a:hover {
         right: -80px;
         width: 1500px;
         height: 100%;
-        opacity: 1;
-        z-index: 10000;
+        visibility: visible;
         align-content: center;
         transition: 0.5s ease;
     }
@@ -344,15 +437,67 @@ nav a:hover {
         display: block;
     }
     .banner {
+        visibility: hidden;
+    }
+    .con-per {
+        display: block;
+        gap: 5rem;
+        width: 100%;
+    }
+    .bar {
+        position: relative;
+        width: 50%;
+        height: 2px;
+        top: 20px;
+        left: 100px;
+        background-color: #fff;
+    }
+    .logo-banner {
+        flex-wrap: wrap;
+        display: flex;
+        background-color: white;
+        width: 350px;
+        border-radius: 100%;
+        height: 350px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        align-content: center;
+        background-image: url("./assets/p01.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .sec-text {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .typed-text {
+        flex-wrap: wrap;
+        font-size: 2em;
+        letter-spacing: 10px;
+        color: #df8b0b;
+        position: relative;
+    }
+    .typed-text::before {
+        flex-wrap: wrap;
+        content: '|';
+        position: absolute;
+        color: #000;
+        right: 0px;
+        background-color: #000;
+        width: 100%;
+        animation: typing 2.5s steps(15) infinite;
+    }
+    /* .banner {
         width: 100%;
         height: 70px;
-        top: 80px;
+        top: 500px;
         background: #fff;
         position: fixed;
         place-items: center;
         align-content: center;
         display: grid;
-        z-index: 10;
     }
     .banner.sticky {
         width: 90%;
@@ -364,7 +509,6 @@ nav a:hover {
         align-content: center;
         display: grid;
         border-radius: 50px;
-        z-index: 10;
         left: 20px;
     }
     .banner ul {
@@ -416,7 +560,7 @@ nav a:hover {
     .banner ul li:active a .text {
         opacity: 1;
         transform: translateY(10px);
-    }
+    } */
     .swiper_container {
         z-index: 0;
     }

@@ -1,6 +1,6 @@
 import { Children, useState } from "react"
 import { Link, useMatch, useResolvedPath } from  "react-router-dom"
-import { FiMenu,FiX } from "react-icons/fi"; 
+import { FiMenu,FiX,FiHardDrive } from "react-icons/fi"; 
 
 export default function Navbar(){
 
@@ -11,7 +11,7 @@ export default function Navbar(){
     <header>
         <div className="container">
             <nav className="nav">
-            <Link to="/" className="site-title"><img src="/src/assets/vite.svg" /></Link>
+            <Link to="/" className="site-title"><FiHardDrive /></Link>
             <ul className={click ? "active" : ""}>
                 <Customlink to="/" onClick={closeMobileMenu}>Home</Customlink>
                 <Customlink to="/pricing" onClick={closeMobileMenu}>About</Customlink>

@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
 import Pricing from './page/Pricing'
 import Home from './page/Home'
 import About from './page/About'
@@ -30,6 +31,7 @@ function App() {
     <BackToTop />
     </div>
     <motion.div style={{ scaleX: scrollYProgress }} />
+    <Footer />
     </>
   )
 }

@@ -187,7 +187,7 @@ export default function Home(){
             <div className="logos">
                 <div className="logos hidden">
                     <div className="logos-icon">
-                    <img src="/public/php.svg"  alt="php" />
+                    <img src="/src/assets/php.svg"  alt="php" />
                     </div>
                     <div className="logos-text">
                         PHP
@@ -195,7 +195,7 @@ export default function Home(){
                 </div>
                 <div className="logos hidden">
                     <div className="logos-icon">
-                    <img src="/public/html.svg"  alt="html" />
+                    <img src="/src/assets/html.svg"  alt="html" />
                     </div>
                     <div className="logos-text">
                         HTML
@@ -203,7 +203,7 @@ export default function Home(){
                 </div>
                 <div className="logos hidden">
                     <div className="logos-icon">
-                    <img src="/public/react.svg"  alt="react" />
+                    <img src="/src/assets/reactlogo.svg"  alt="react" />
                     </div>
                     <div className="logos-text">
                         React
@@ -211,7 +211,7 @@ export default function Home(){
                 </div>
                 <div className="logos hidden">
                     <div className="logos-icon">
-                    <img src="/public/laravel.svg" alt="laravel" />
+                    <img src="/src/assets/laravel.svg" alt="laravel" />
                     </div>
                     <div className="logos-text">
                         Laravel

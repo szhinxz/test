@@ -4,6 +4,7 @@ import { MdTimeline,MdFace,MdPhp } from "react-icons/md";
 import {timelineElement} from "../Components/timelineEle";
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 import { BsPersonWorkspace } from "react-icons/bs";
+import {Image01} from "../image"
 
 import Resume from "../assets/Resume.pdf"
 
@@ -196,51 +197,14 @@ export default function Home(){
         <section className="hidden" id="skills">
             <h2>My skills</h2>
             <div className="skill-con">
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/web.png" alt="" />
-                        <h3>PHP</h3>
-                        <p>intermediate</p>
+                {Image01.map((e,index) =>{
+                    return(
+                        <div className="box" key={index.id}>
+                        <img className="logos hidden" src={e.paths} alt="" />
+                        <h3>{e.name}</h3>
+                        <p>{e.act}</p>
                     </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/html-5.png" alt="" />
-                        <h3>HTML</h3>
-                        <p>Pre-Advanced</p>
-                    </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/css-3.png" alt="" />
-                        <h3>CSS</h3>
-                        <p>Pre-Advanced</p>
-                    </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/java.png" alt="" />
-                        <h3>JAVASCRIPT</h3>
-                        <p>intermediate</p>
-                    </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/photoshop-camera.png" alt="" />
-                        <h3>PHOTOSHOP</h3>
-                        <p>Pre-Advanced</p>
-                    </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/premiere.png" alt="" />
-                        <h3>PREMIERE PRO</h3>
-                        <p>Pre-Advanced</p>
-                    </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/science.png" alt="" />
-                        <h3>REACT</h3>
-                        <p>intermediate</p>
-                    </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/laravel.svg" alt="" />
-                        <h3>LARAVEL</h3>
-                        <p>intermediate</p>
-                    </div>
-                    <div className="box">
-                        <img className="logos hidden" src="/src/assets/github.png" alt="" />
-                        <h3>GITHUB</h3>
-                        <p>intermediate</p>
-                    </div>
+                    )})}
             </div>
         </section>
 

@@ -14,7 +14,7 @@ export default function Navbar(){
             <Link to="/" className="site-title"><FiHardDrive /></Link>
             <ul className={click ? "active" : ""}>
                 <Customlink to="/" onClick={closeMobileMenu}>Home</Customlink>
-                <Customlink to="/pricing" onClick={closeMobileMenu}>About</Customlink>
+                <Customlink to="/pricing" onClick={closeMobileMenu}>Work</Customlink>
                 <Customlink to="/about" onClick={closeMobileMenu}>Contact</Customlink>
             </ul>
             <div className="mobile-menu" onClick={handleClick}>

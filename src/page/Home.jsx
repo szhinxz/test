@@ -1,6 +1,6 @@
 import { useEffect,useState} from "react";
 import { FiGrid,FiUser,FiX,FiLayers } from "react-icons/fi"; 
-import { MdTimeline,MdFace } from "react-icons/md"; 
+import { MdTimeline,MdFace,MdPhp } from "react-icons/md"; 
 import {timelineElement} from "../Components/timelineEle";
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 import { BsPersonWorkspace } from "react-icons/bs";
@@ -195,39 +195,52 @@ export default function Home(){
 
         <section className="hidden" id="skills">
             <h2>My skills</h2>
-            <div className="logos">
-                <div className="logos hidden">
-                    <div className="logos-icon">
-                    <img src="/src/assets/php.svg"  alt="php" />
+            <div className="skill-con">
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/web.png" alt="" />
+                        <h3>PHP</h3>
+                        <p>intermediate</p>
                     </div>
-                    <div className="logos-text">
-                        PHP
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/html-5.png" alt="" />
+                        <h3>HTML</h3>
+                        <p>Pre-Advanced</p>
                     </div>
-                </div>
-                <div className="logos hidden">
-                    <div className="logos-icon">
-                    <img src="/src/assets/html.svg"  alt="html" />
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/css-3.png" alt="" />
+                        <h3>CSS</h3>
+                        <p>Pre-Advanced</p>
                     </div>
-                    <div className="logos-text">
-                        HTML
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/java.png" alt="" />
+                        <h3>JAVASCRIPT</h3>
+                        <p>intermediate</p>
                     </div>
-                </div>
-                <div className="logos hidden">
-                    <div className="logos-icon">
-                    <img src="/src/assets/reactlogo.svg"  alt="react" />
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/photoshop-camera.png" alt="" />
+                        <h3>PHOTOSHOP</h3>
+                        <p>Pre-Advanced</p>
                     </div>
-                    <div className="logos-text">
-                        React
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/premiere.png" alt="" />
+                        <h3>PREMIERE PRO</h3>
+                        <p>Pre-Advanced</p>
                     </div>
-                </div>
-                <div className="logos hidden">
-                    <div className="logos-icon">
-                    <img src="/src/assets/laravel.svg" alt="laravel" />
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/science.png" alt="" />
+                        <h3>REACT</h3>
+                        <p>intermediate</p>
                     </div>
-                    <div className="logos-text">
-                        Laravel
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/laravel.svg" alt="" />
+                        <h3>LARAVEL</h3>
+                        <p>intermediate</p>
                     </div>
-                </div>
+                    <div className="box">
+                        <img className="logos hidden" src="/src/assets/github.png" alt="" />
+                        <h3>GITHUB</h3>
+                        <p>intermediate</p>
+                    </div>
             </div>
         </section>
 
@@ -235,41 +248,27 @@ export default function Home(){
             <h2>EXPERIENCE</h2>
             <div className="con-per">
                 <div className="box">
-                    <div className="box-l">
-                        <h1><BsPersonWorkspace /></h1>
-                        <h2>Company</h2>
-                        <p>Thaicentral</p>
-                    </div>
-                    <div className="box-r">
-                        <h1><FiUser /></h1>
-                        <h2>Position</h2>
-                        <p>System Developer</p>
-                        <p>Salary</p>
-                        <p>22,000</p>
+                    <div className="box-text">
+                        <h1><img src="#" alt="" />-</h1>
+                        <h2>System Developer</h2>
+                        <p>พัฒนาเว็บใช้ภายในเว็บไซต์ ในรูปแบบเว็บไซต์การส่งฟอร์มอนุมัติและติดตามผล ระบบแจ้งเตือนผ่านอีเมลล์</p>
                     </div>
                 </div>
                 <div className="bar"></div>
                 <div className="box">
-                    <div className="box-l">
-                        <h1><BsPersonWorkspace /></h1>
-                        <h2>Company</h2>
-                        <p>Miracle Life Coach</p>
-                    </div>
-                    <div className="box-r">
-                        <h1><FiUser /></h1>
-                        <h2>Position</h2>
-                        <p>System Developer</p>
-                        <p>Salary</p>
-                        <p>-</p>
+                    <div className="box-text">
+                        <h1><img src="#" alt="" />-</h1>
+                        <h2>Coelum</h2>
+                        <p>เว็บไซต์จัดงานศพที่มีวัดร่วมเป็นพาร์ทเนอร์ ด้วยรูปแบบการจองวัดและศาลาแบบออนไลน์</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section className="hidden"> 
+        {/* <section className="hidden"> 
             <h2>Resume</h2>
             <p>This file Resume for open in pdf</p>
             <a href={Resume} download="Resume"><button className="Res-but">Resume</button></a>
-        </section>
+        </section> */}
         </>
 
     )

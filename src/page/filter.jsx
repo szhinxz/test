@@ -47,6 +47,11 @@ function Filter({setActiveGenre,activeGenre,setFiltered ,popular}){
             <button className={activeGenre === "Directing" ? "active" : ""} onClick={() => setActiveGenre("Directing")}>Directing</button>
             <button className={activeGenre === "Acting" ? "active" : ""} onClick={() => setActiveGenre("Acting")}>Acting</button>
          </div>
+
+         <div className="inputBox">
+            <input type="text" />
+            <span>Search...</span>
+         </div>
         
         </>
     )
